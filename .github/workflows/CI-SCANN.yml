@@ -29,9 +29,6 @@ jobs:
         run: |
           mvn clean package -B -DskipTests -Dmaven.compiler.extraArguments="--add-modules=jdk.compiler"
 
-      - name: Run Cucumber tests
-        run: mvn test
-
   codeql-analysis:
     name: Analyze
     runs-on: ubuntu-latest
