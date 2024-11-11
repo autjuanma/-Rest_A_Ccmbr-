@@ -1,4 +1,4 @@
-Feature: To create a new booking in restful-booker
+Feature: New booking 
 
   Background: 
     Given she has access to the endpoint "/booking"
