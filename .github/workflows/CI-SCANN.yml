@@ -27,7 +27,7 @@ jobs:
 
       - name: Build with Maven
         run: |
-          mvn clean package -B -DskipTests
+          mvn clean package -B -DskipTests -Dmaven.compiler.extraArguments="--add-modules=jdk.compiler"
 
       - name: Run Cucumber tests
         run: mvn test
