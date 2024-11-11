@@ -12,6 +12,7 @@ import org.json.JSONObject;
 
 import com.devaura.qa.models.BkDTO;
 import com.devaura.qa.utils.DeserializedResponse;
+import com.devaura.qa.utils.JsonReader;
 import com.devaura.qa.utils.TestContext;
 
 import io.cucumber.datatable.DataTable;
@@ -114,5 +115,15 @@ public class CreateBkDefinition {
 	public void userValidatesResponseWithJSONSchema(String schemaFileName) {
 		context.response.then().assertThat()
 				.body(JsonSchemaValidator.matchesJsonSchemaInClasspath(SCHEMA_FILE_PATH + schemaFileName));
+	}
+
+	@When("she creates a booking using the data identified by {string} from the JSON file {string}")
+	public void userCreatesABookingUsingDataFromJSONFile(String dataKey, String jsonFile) throws IOException {
+		context.response = context.requestSetup().body(JsonReader.getRequestBody(jsonFile, dataKey)).when()
+				.post(context.session.get("endpoint").toString());
+		BkDTO bookingDTO = DeserializedResponse.deserializedResponse(context.response, BkDTO.class);
+		assertNotNull("Booking not created", bookingDTO);
+		LOG.info("Newly created booking ID: " + bookingDTO.getBookingid());
+		context.session.put("bookingID", bookingDTO.getBookingid());
 	}
 }

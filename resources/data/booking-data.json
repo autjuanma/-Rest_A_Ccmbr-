@@ -1,0 +1,24 @@
+{
+	"createBooking1": {
+		"firstname": "Alice",
+		"lastname": "Wonderland",
+		"totalprice": "3500",
+		"depositpaid": "false",
+		"bookingdates": {
+			"checkin": "2022-08-01",
+			"checkout": "2022-08-15"
+		},
+		"additionalneeds": "Breakfast"
+	},
+	"createBooking2": {
+		"firstname": "Harry",
+		"lastname": "Potter",
+		"totalprice": "15000",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2023-01-05",
+			"checkout": "2023-01-12"
+		},
+		"additionalneeds": "Wand Service"
+	}
+}
