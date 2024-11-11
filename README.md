@@ -339,7 +339,5 @@ This project is protected under the [SELECT-A-LICENSE](https://choosealicense.co
 
 ---
 
-<p align="center">
 ![alt text](https://github.com/autjuanma/-Rest_A_Ccmbr-/blob/master/.manual-report/96545678.png)
-</p>
-<p align="center"><!-- default option, no dependency badges. -->
+
