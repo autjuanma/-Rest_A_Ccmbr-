@@ -275,6 +275,9 @@ echo 'INSERT-RUN-COMMAND-HERE'
 Run the test suite using the following command:
 echo 'INSERT-TEST-COMMAND-HERE'
 
+
+### 🧪 Cucumber Ext Report
+![alt text](https://github.com/autjuanma/-Rest_A_Ccmbr-/blob/master/.manual-report/.scenarios/e2e-pdf.png)
 ---
 ## 📌 Project Roadmap
 
