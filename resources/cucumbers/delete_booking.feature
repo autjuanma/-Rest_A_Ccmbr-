@@ -27,7 +27,6 @@ Feature: booking rm/DELETE scenarios
     And she validates the response against the JSON schema "booking-details-schema.json"
     And sends request to retrieve the booking IDs
     And she should receive a response code of 200
-    And she validates the response against the JSON schema "booking-details-schema.json"
     And performs to booking delete request with mecanims basic auth
     And she should receive a response code of 201
 
