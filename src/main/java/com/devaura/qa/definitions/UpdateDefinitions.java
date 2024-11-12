@@ -22,11 +22,11 @@ import com.devaura.qa.utils.TestContext;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.When;
 
-public class UpdateDf {
+public class UpdateDefinitions {
 	private TestContext context;
-	private static final Logger LOG = LogManager.getLogger(UpdateDf.class);
+	private static final Logger LOG = LogManager.getLogger(UpdateDefinitions.class);
 
-	public UpdateDf(TestContext context) {
+	public UpdateDefinitions(TestContext context) {
 		this.context = context;
 	}
 

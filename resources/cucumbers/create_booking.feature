@@ -3,6 +3,7 @@ Feature: New booking
   Background: 
     Given she has access to the endpoint "/booking"
 
+  @create
   Scenario Outline: To create new booking using cucumber Data Table
     When she creates a booking
       | firstname   | lastname   | totalprice   | depositpaid   | checkin   | checkout   | additionalneeds   |
@@ -13,11 +14,12 @@ Feature: New booking
 
     Examples: 
       | firstname | lastname | totalprice | depositpaid | checkin    | checkout   | additionalneeds |
+      | John      | Doe      |       1200 | true        | 2021-05-05 | 2021-05-15 | Breakfast       |
       | Ranma     | Saotome  |       1500 | true        | 2022-01-10 | 2022-01-20 | Martial Arts    |
       | Akane     | Tendo    |       3000 | false       | 2022-02-15 | 2022-03-25 | Cooking         |
       | Ryoga     | Hibiki   |       2500 | true        | 2022-03-01 | 2022-03-15 | Lost Adventures |
       | Shampoo   | Cat      |       3200 | false       | 2022-04-10 | 2022-04-20 | Noodles         |
-      | Mousse    |          |       1800 | true        | 2022-05-05 | 2022-05-15 | Love Pursuit    |
+      | happosai  | Master   |       1800 | true        | 2022-05-05 | 2022-05-15 | Love Pursuit    |
       | Genma     | Saotome  |       2000 | false       | 2022-06-01 | 2022-06-10 | Training        |
       | Soun      | Tendo    |       1600 | true        | 2022-07-20 | 2022-07-30 | Family Honor    |
       | Nabiki    | Tendo    |       2200 | false       | 2022-08-15 | 2022-08-25 | Business        |

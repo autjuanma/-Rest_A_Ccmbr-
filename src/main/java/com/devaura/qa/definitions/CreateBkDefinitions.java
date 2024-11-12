@@ -21,9 +21,9 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.module.jsv.JsonSchemaValidator;
 
-public class CreateBkDefinition {
+public class CreateBkDefinitions {
 
-	private static final Logger LOG = LogManager.getLogger(CreateBkDefinition.class);
+	private static final Logger LOG = LogManager.getLogger(CreateBkDefinitions.class);
 	private static final String SCHEMA_FILE_PATH = "data/";
 
 	private static final String BOOKING_ID_MISSING_MSG = "Booking ID missing";
@@ -37,7 +37,7 @@ public class CreateBkDefinition {
 
 	private TestContext context;
 
-	public CreateBkDefinition(TestContext context) {
+	public CreateBkDefinitions(TestContext context) {
 		this.context = context;
 	}
 
