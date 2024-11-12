@@ -3,7 +3,7 @@
 </p>
 <p align="center"><h1 align="center">-REST_A_CCMBR-</h1></p>
 <p align="center">
-	<em><code>❯ REPLACE-ME</code></em>
+	<em><code>❯ [IND AF LNX] </code></em>
 </p>
 <p align="center">
 	<img src="https://img.shields.io/github/license/autjuanma/-Rest_A_Ccmbr-?style=default&logo=opensourceinitiative&logoColor=white&color=12ff00" alt="license">

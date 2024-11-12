@@ -4,6 +4,8 @@ import static com.devaura.qa.utils.DeserializedResponse.deserializedResponse;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
 
@@ -37,9 +39,26 @@ public class UpdateDf {
 		credentials.put("password", psswd);
 		context.response = context.requestSetup().body(credentials.toString()).when()
 				.post(context.session.get("endpoint").toString());
+
 		String token = context.response.path("token");
 		LOG.info("Auth Token: " + token);
+
 		context.session.put("token", "token=" + token);
+
+		writeTokenToFile(token);
+	}
+
+	private void writeTokenToFile(String token) {
+		String filePath = "resources/data/output/token.json";
+		JSONObject jsonObject = new JSONObject();
+		jsonObject.put("token", token);
+
+		try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+			writer.write(jsonObject.toString(4)); // Indent with 4 spaces for readability
+			LOG.info("Token successfully written to " + filePath);
+		} catch (IOException e) {
+			LOG.error("Error writing token to file: " + e.getMessage());
+		}
 	}
 
 	@When("sends request to retrieve the booking IDs")
@@ -77,7 +96,8 @@ public class UpdateDf {
 
 	@When("user updates the booking details using data {string} from JSON file {string}")
 	@When("updates the booking details using the data identified by {string} from the JSON file named {string} .")
-	public void userUpdatesTheBookingDetailsUsingDataFromJSONFile(String objectKey, String jsonFile) throws IOException {
+	public void userUpdatesTheBookingDetailsUsingDataFromJSONFile(String objectKey, String jsonFile)
+			throws IOException {
 		context.response = context.requestSetup().header("Cookie", context.session.get("token").toString())
 				.pathParam("bookingID", context.session.get("bookingID"))
 				.body(JsonReader.getRequestBody(jsonFile, objectKey)).when()
@@ -88,7 +108,7 @@ public class UpdateDf {
 
 	}
 
-	@When("user makes a request to update first name {string} & Last name {string}")
+	@When("makes a request to update the first name to {string} and the last name to {string}")
 	public void userMakesARequestToUpdateFirstNameLastName(String firstName, String lastName) throws IOException {
 		JSONObject body = new JSONObject();
 		body.put("firstname", firstName);

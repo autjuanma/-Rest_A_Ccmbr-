@@ -41,6 +41,6 @@ Feature: To update a booking in restful-booker
   Scenario: To partially update a booking
     Given she has access to the endpoint "/booking"
     When sends request to retrieve the booking IDs
-    And user makes a request to update first name "Mickey" & Last name "Mouse"
+    And makes a request to update the first name to "Mickey" and the last name to "Mouse"
     Then she should receive a response code of 200
     And she validates the response against the JSON schema "update-object-file.json"
