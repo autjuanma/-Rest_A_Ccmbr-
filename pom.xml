@@ -13,8 +13,8 @@
 	<url>http://www.tous.bb</url>
 
 	<properties>
-		 <maven.compiler.source>22</maven.compiler.source> <!-- Updated to match JDK 22 -->
-    <maven.compiler.target>22</maven.compiler.target> <!-- Updated to match JDK 22 -->
+		<maven.compiler.source>17</maven.compiler.source> 
+		<maven.compiler.target>17</maven.compiler.target> 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<cucumber.version>6.9.1</cucumber.version>
 		<poi.version>5.2.2</poi.version>
@@ -158,19 +158,20 @@
 					</execution>
 				</executions>
 			</plugin>
-			 <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.10.1</version> <!-- Ensure this is the latest -->
-            <configuration>
-                <source>22</source> <!-- Updated to match JDK 22 -->
-                <target>22</target> <!-- Updated to match JDK 22 -->
-                <compilerArgs>
-                    <arg>--add-modules</arg>
-                    <arg>jdk.compiler</arg> <!-- Added to resolve access issues -->
-                </compilerArgs>
-            </configuration>
-        </plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.10.1</version> <!-- Ensure this is the latest -->
+				<configuration>
+					<source>17</source> <!-- Updated to match JDK 22 -->
+					<target>17</target> <!-- Updated to match JDK 22 -->
+					<compilerArgs>
+						<arg>--add-modules</arg>
+						<arg>jdk.compiler</arg> <!-- Added to resolve access
+						issues -->
+					</compilerArgs>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 </project>

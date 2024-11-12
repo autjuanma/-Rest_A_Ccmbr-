@@ -112,9 +112,8 @@ public class CreateBkDefinition {
 	}
 
 	@Then("she validates the response against the JSON schema {string}")
-	public void userValidatesResponseWithJSONSchema(String schemaFileName) {
-		context.response.then().assertThat()
-				.body(JsonSchemaValidator.matchesJsonSchemaInClasspath(SCHEMA_FILE_PATH + schemaFileName));
+	public void userValidatesResponseWithJSONSchema(String jsonFileName) {
+		context.response.then().assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath(SCHEMA_FILE_PATH + jsonFileName));
 	}
 
 	@When("she creates a booking using the data identified by {string} from the JSON file {string}")

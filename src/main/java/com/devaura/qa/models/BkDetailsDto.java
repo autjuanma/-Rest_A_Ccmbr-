@@ -1,6 +1,8 @@
 package com.devaura.qa.models;
 
 public class BkDetailsDto {
+	
+//	improve using lomb
 	private String firstname;
 	private String additionalneeds;
 	private BkData bookingdates;

@@ -1,0 +1,68 @@
+{
+	"upd-booking-0001": {
+		"firstname": "Ranma",
+		"lastname": "Saotome",
+		"totalprice": "12321",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2021-11-10",
+			"checkout": "2021-11-20"
+		},
+		"additionalneeds": "Nodoka's Special Tea"
+	},
+	"upd-booking-0002": {
+		"firstname": "Happosai",
+		"lastname": "Master",
+		"totalprice": "35007",
+		"depositpaid": "false",
+		"bookingdates": {
+			"checkin": "2021-09-10",
+			"checkout": "2021-10-20"
+		},
+		"additionalneeds": "Panty Collection"
+	},
+	"upd-booking-0003": {
+		"firstname": "Akane",
+		"lastname": "Tendo",
+		"totalprice": "20000",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2021-10-01",
+			"checkout": "2021-10-15"
+		},
+		"additionalneeds": "Martial Arts Training Manual"
+	},
+	"upd-booking-0004": {
+		"firstname": "Shampoo",
+		"lastname": "Amazon",
+		"totalprice": "15000",
+		"depositpaid": "false",
+		"bookingdates": {
+			"checkin": "2021-08-01",
+			"checkout": "2021-08-10"
+		},
+		"additionalneeds": "Herbal Remedies"
+	},
+	"upd-booking-0005": {
+		"firstname": "Ryoga",
+		"lastname": "Pig",
+		"totalprice": "18000",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2021-07-15",
+			"checkout": "2021-07-25"
+		},
+		"additionalneeds": "Directions to the Nearest Restaurant"
+	},
+	"upd-booking-0006": {
+		"firstname": "Ukyo",
+		"lastname": "Kuonji",
+		"totalprice": "22000",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2021-06-01",
+			"checkout": "2021-06-10"
+		},
+		"additionalneeds": "Okonomiyaki Ingredients"
+	}
+}
