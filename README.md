@@ -43,7 +43,7 @@ VIII. [🙌 Acknowledgments](#-acknowledgments)
 
 ## 📍 Overview
 
-![alt text](https://github.com/autjuanma/R-Ass-Kyubi/blob/master/manual-report/.predator-kally.jpg)
+![alt text](https://github.com/autjuanma/-Rest_A_Ccmbr-/blob/master/.manual-report/.V01/.predator-kally.jpg)
 
 ---
 
