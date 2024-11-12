@@ -333,9 +333,9 @@ This project is protected under the [SELECT-A-LICENSE](https://choosealicense.co
 
 ---
 
-## 🙌 [IND AF LNX] Donate! Make a coffee
+## 🙌 [IND AF LNX 🐧] Donate! Make a coffee @Med📌
 
-- List any resources, contributors, inspiration, etc. here.
+- Made and Extends [@Masha-Style 🤖]
 
 ---
 
