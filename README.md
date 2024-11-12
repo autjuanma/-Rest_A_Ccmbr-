@@ -333,7 +333,7 @@ This project is protected under the [SELECT-A-LICENSE](https://choosealicense.co
 
 ---
 
-## 🙌 Acknowledgments
+## 🙌 [IND AF LNX] Donate! Make a coffee
 
 - List any resources, contributors, inspiration, etc. here.
 
