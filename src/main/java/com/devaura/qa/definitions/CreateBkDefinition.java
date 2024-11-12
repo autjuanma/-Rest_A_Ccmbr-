@@ -55,16 +55,12 @@ public class CreateBkDefinition {
 	public void userCreatesABooking(DataTable dataTable) throws IOException {
 		Map<String, String> bookingData = dataTable.asMaps().get(0);
 		JSONObject bookingBody = createBookingBody(bookingData);
-
 		context.response = context.requestSetup().body(bookingBody.toString()).when()
 				.post(context.session.get("endpoint").toString());
-
 		BkDTO bookingDTO = DeserializedResponse.deserializedResponse(context.response, BkDTO.class);
 		assertNotNull("Booking not created", bookingDTO);
 		LOG.info("Newly created booking ID: " + bookingDTO.getBookingid());
 		context.session.put("bookingID", bookingDTO.getBookingid());
-
-		// Store booking data in context for later validation
 		context.session.put("bookingData", bookingData);
 		context.session.put("bookingDTO", bookingDTO);
 	}

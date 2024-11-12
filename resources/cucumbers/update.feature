@@ -13,7 +13,7 @@ Feature: To update a booking in restful-booker
       | firstname   | lastname   | totalprice   | depositpaid   | checkin   | checkout   | additionalneeds   |
       | <firstname> | <lastname> | <totalprice> | <depositpaid> | <checkin> | <checkout> | <additionalneeds> |
     Then she should receive a response code of 200
-    And she validates the response against the JSON schema "booking-details-schema.json"
+    And she validates the response against the JSON schema "json-booking-schema.json"
 
     Examples: 
       | firstname | lastname | totalprice | depositpaid | checkin    | checkout   | additionalneeds |
