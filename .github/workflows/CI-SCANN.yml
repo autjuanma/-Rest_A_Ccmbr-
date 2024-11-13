@@ -27,7 +27,7 @@ jobs:
 
       - name: Build with Maven
         run: |
-          mvn clean package -B -DskipTests -Dmaven.compiler.extraArguments="--add-modules=jdk.compiler"
+          mvn clean package -B -DskipTests -Dmaven.compiler.extraArguments="--add-modules=jdk.compiler --add-opens=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED"
 
   codeql-analysis:
     name: Analyze
