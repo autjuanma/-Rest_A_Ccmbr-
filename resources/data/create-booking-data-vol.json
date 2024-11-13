@@ -1,0 +1,552 @@
+{
+	"create-booking0001": {
+		"firstname": "John",
+		"lastname": "Doe",
+		"totalprice": "1200",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2021-05-05",
+			"checkout": "2021-05-15"
+		},
+		"additionalneeds": "Breakfast"
+	},
+	"create-booking0002": {
+		"firstname": "Ada",
+		"lastname": "Lovelace",
+		"totalprice": "1800",
+		"depositpaid": "false",
+		"bookingdates": {
+			"checkin": "2023-01-01",
+			"checkout": "2023-01-10"
+		},
+		"additionalneeds": "Computer Science"
+	},
+	"create-booking0003": {
+		"firstname": "Alan",
+		"lastname": "Turing",
+		"totalprice": "2000",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2023-02-01",
+			"checkout": "2023-02-10"
+		},
+		"additionalneeds": "Coding Workshop"
+	},
+	"create-booking0004": {
+		"firstname": "Grace",
+		"lastname": "Hopper",
+		"totalprice": "2200",
+		"depositpaid": "false",
+		"bookingdates": {
+			"checkin": "2023-03-01",
+			"checkout": "2023-03-10"
+		},
+		"additionalneeds": "AI Seminar"
+	},
+	"create-booking0005": {
+		"firstname": "Tim",
+		"lastname": "Berners-Lee",
+		"totalprice": "2100",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2023-04-01",
+			"checkout": "2023-04-10"
+		},
+		"additionalneeds": "Web Development"
+	},
+	"create-booking0006": {
+		"firstname": "Linus",
+		"lastname": "Torvalds",
+		"totalprice": "2300",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2023-05-01",
+			"checkout": "2023-05-10"
+		},
+		"additionalneeds": "Open Source Tools"
+	},
+	"create-booking0007": {
+		"firstname": "Steve",
+		"lastname": "Jobs",
+		"totalprice": "2500",
+		"depositpaid": "false",
+		"bookingdates": {
+			"checkin": "2023-06-01",
+			"checkout": "2023-06-10"
+		},
+		"additionalneeds": "Innovation Session"
+	},
+	"create-booking0008": {
+		"firstname": "Bill",
+		"lastname": "Gates",
+		"totalprice": "2400",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2023-07-01",
+			"checkout": "2023-07-10"
+		},
+		"additionalneeds": "Philanthropy Talk"
+	},
+	"create-booking0009": {
+		"firstname": "Elon",
+		"lastname": "Musk",
+		"totalprice": "2600",
+		"depositpaid": "false",
+		"bookingdates": {
+			"checkin": "2023-08-01",
+			"checkout": "2023-08-10"
+		},
+		"additionalneeds": "Space Technology"
+	},
+	"create-booking0010": {
+		"firstname": "Mark",
+		"lastname": "Zuckerberg",
+		"totalprice": "2700",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2023-09-01",
+			"checkout": "2023-09-10"
+		},
+		"additionalneeds": "Social Media Trends"
+	},
+	"create-booking0011": {
+		"firstname": "Jeff",
+		"lastname": "Bezos",
+		"totalprice": "2800",
+		"depositpaid": "false",
+		"bookingdates": {
+			"checkin": "2023-10-01",
+			"checkout": "2023-10-10"
+		},
+		"additionalneeds": "E-commerce Insights"
+	},
+	"create-booking0012": {
+		"firstname": "Sheryl",
+		"lastname": "Sandberg",
+		"totalprice": "2900",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2023-11-01",
+			"checkout": "2023-11-10"
+		},
+		"additionalneeds": "Leadership Workshop"
+	},
+	"create-booking0013": {
+		"firstname": "Sundar",
+		"lastname": "Pichai",
+		"totalprice": "3000",
+		"depositpaid": "false",
+		"bookingdates": {
+			"checkin": "2023-12-01",
+			"checkout": "2023-12-10"
+		},
+		"additionalneeds": "Cloud Computing"
+	},
+	"create-booking0014": {
+		"firstname": "Satya",
+		"lastname": "Nadella",
+		"totalprice": "3100",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2024-01-01",
+			"checkout": "2024-01-10"
+		},
+		"additionalneeds": "Digital Transformation"
+	},
+	"create-booking0015": {
+		"firstname": "Susan",
+		"lastname": "Wojcicki",
+		"totalprice": "3200",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2024-02-01",
+			"checkout": "2024-02-10"
+		},
+		"additionalneeds": "Video Content Trends"
+	},
+	"create-booking0016": {
+		"firstname": "Marissa",
+		"lastname": "Mayer",
+		"totalprice": "3300",
+		"depositpaid": "false",
+		"bookingdates": {
+			"checkin": "2024-03-01",
+			"checkout": "2024-03-10"
+		},
+		"additionalneeds": "UX Design Workshop"
+	},
+	"create-booking0017": {
+		"firstname": "Jack",
+		"lastname": "Dorsey",
+		"totalprice": "3400",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2024-04-01",
+			"checkout": "2024-04-10"
+		},
+		"additionalneeds": "Microblogging Insights"
+	},
+	"create-booking0018": {
+		"firstname": "Eric",
+		"lastname": "Schmidt",
+		"totalprice": "3500",
+		"depositpaid": "false",
+		"bookingdates": {
+			"checkin": "2024-05-01",
+			"checkout": "2024-05-10"
+		},
+		"additionalneeds": "Technology Trends"
+	},
+	"create-booking0019": {
+		"firstname": "Larry",
+		"lastname": "Page",
+		"totalprice": "3600",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2024-06-01",
+			"checkout": "2024-06-10"
+		},
+		"additionalneeds": "Search Engine Optimization"
+	},
+	"create-booking0020": {
+		"firstname": "Sergey",
+		"lastname": "Brin",
+		"totalprice": "3700",
+		"depositpaid": "false",
+		"bookingdates": {
+			"checkin": "2024-07-01",
+			"checkout": "2024-07-10"
+		},
+		"additionalneeds": "Data Science Workshop"
+	},
+	"create-booking0021": {
+		"firstname": "Angela",
+		"lastname": "Ahrendts",
+		"totalprice": "3800",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2024-08-01",
+			"checkout": "2024-08-10"
+		},
+		"additionalneeds": "Retail Technology"
+	},
+	"create-booking0022": {
+		"firstname": "Tim",
+		"lastname": "Cook",
+		"totalprice": "3900",
+		"depositpaid": "false",
+		"bookingdates": {
+			"checkin": "2024-09-01",
+			"checkout": "2024-09-10"
+		},
+		"additionalneeds": "Product Design"
+	},
+	"create-booking0023": {
+		"firstname": "Brian",
+		"lastname": "Chesky",
+		"totalprice": "4000",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2024-10-01",
+			"checkout": "2024-10-10"
+		},
+		"additionalneeds": "Travel Tech Insights"
+	},
+	"create-booking0024": {
+		"firstname": "Ben",
+		"lastname": "Horowitz",
+		"totalprice": "4100",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2024-11-01",
+			"checkout": "2024-11-10"
+		},
+		"additionalneeds": "Venture Capital Talk"
+	},
+	"create-booking0025": {
+		"firstname": "Reid",
+		"lastname": "Hoffman",
+		"totalprice": "4200",
+		"depositpaid": "false",
+		"bookingdates": {
+			"checkin": "2024-12-01",
+			"checkout": "2024-12-10"
+		},
+		"additionalneeds": "Networking Strategies"
+	},
+	"create-booking0026": {
+		"firstname": "Sheryl",
+		"lastname": "Sandberg",
+		"totalprice": "4300",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2025-01-01",
+			"checkout": "2025-01-10"
+		},
+		"additionalneeds": "Women in Leadership"
+	},
+	"create-booking0027": {
+		"firstname": "Marc",
+		"lastname": "Benioff",
+		"totalprice": "4400",
+		"depositpaid": "false",
+		"bookingdates": {
+			"checkin": "2025-02-01",
+			"checkout": "2025-02-10"
+		},
+		"additionalneeds": "Cloud Solutions"
+	},
+	"create-booking0028": {
+		"firstname": "Meg",
+		"lastname": "Whitman",
+		"totalprice": "4500",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2025-03-01",
+			"checkout": "2025-03-10"
+		},
+		"additionalneeds": "E-commerce Strategies"
+	},
+	"create-booking0029": {
+		"firstname": "Tim",
+		"lastname": "O'Reilly",
+		"totalprice": "4600",
+		"depositpaid": "false",
+		"bookingdates": {
+			"checkin": "2025-04-01",
+			"checkout": "2025-04-10"
+		},
+		"additionalneeds": "Open Source Advocacy"
+	},
+	"create-booking0030": {
+		"firstname": "Diane",
+		"lastname": "Greene",
+		"totalprice": "4700",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2025-05-01",
+			"checkout": "2025-05-10"
+		},
+		"additionalneeds": "Cloud Computing Innovations"
+	},
+	"create-booking0031": {
+		"firstname": "Larry",
+		"lastname": "Ellison",
+		"totalprice": "4800",
+		"depositpaid": "false",
+		"bookingdates": {
+			"checkin": "2025-06-01",
+			"checkout": "2025-06-10"
+		},
+		"additionalneeds": "Database Management"
+	},
+	"create-booking0032": {
+		"firstname": "Michael",
+		"lastname": "Dell",
+		"totalprice": "4900",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2025-07-01",
+			"checkout": "2025-07-10"
+		},
+		"additionalneeds": "PC Innovation"
+	},
+	"create-booking0033": {
+		"firstname": "Jessica",
+		"lastname": "Jackley",
+		"totalprice": "5000",
+		"depositpaid": "false",
+		"bookingdates": {
+			"checkin": "2025-08-01",
+			"checkout": "2025-08-10"
+		},
+		"additionalneeds": "Microfinance Insights"
+	},
+	"create-booking0034": {
+		"firstname": "Whitney",
+		"lastname": "Wolfe Herd",
+		"totalprice": "5100",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2025-09-01",
+			"checkout": "2025-09-10"
+		},
+		"additionalneeds": "Women in Tech"
+	},
+	"create-booking0035": {
+		"firstname": "Naval",
+		"lastname": "Ravikant",
+		"totalprice": "5200",
+		"depositpaid": "false",
+		"bookingdates": {
+			"checkin": "2025-10-01",
+			"checkout": "2025-10-10"
+		},
+		"additionalneeds": "Startup Advice"
+	},
+	"create-booking0036": {
+		"firstname": "Peter",
+		"lastname": "Thiel",
+		"totalprice": "5300",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2025-11-01",
+			"checkout": "2025-11-10"
+		},
+		"additionalneeds": "Investment Strategies"
+	},
+	"create-booking0037": {
+		"firstname": "Ruth",
+		"lastname": "Porat",
+		"totalprice": "5400",
+		"depositpaid": "false",
+		"bookingdates": {
+			"checkin": "2025-12-01",
+			"checkout": "2025-12-10"
+		},
+		"additionalneeds": "Financial Leadership"
+	},
+	"create-booking0038": {
+		"firstname": "Mary",
+		"lastname": "Meeker",
+		"totalprice": "5500",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2026-01-01",
+			"checkout": "2026-01-10"
+		},
+		"additionalneeds": "Market Trends"
+	},
+	"create-booking0039": {
+		"firstname": "Ginni",
+		"lastname": "Rometty",
+		"totalprice": "5600",
+		"depositpaid": "false",
+		"bookingdates": {
+			"checkin": "2026-02-01",
+			"checkout": "2026-02-10"
+		},
+		"additionalneeds": "Business Strategy"
+	},
+	"create-booking0040": {
+		"firstname": "Jensen",
+		"lastname": "Huang",
+		"totalprice": "5700",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2026-03-01",
+			"checkout": "2026-03-10"
+		},
+		"additionalneeds": "AI and GPU Technology"
+	},
+	"create-booking0041": {
+		"firstname": "Safra",
+		"lastname": "Catz",
+		"totalprice": "5800",
+		"depositpaid": "false",
+		"bookingdates": {
+			"checkin": "2026-04-01",
+			"checkout": "2026-04-10"
+		},
+		"additionalneeds": "Corporate Finance"
+	},
+	"create-booking0042": {
+		"firstname": "Shantanu",
+		"lastname": "Narayen",
+		"totalprice": "5900",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2026-05-01",
+			"checkout": "2026-05-10"
+		},
+		"additionalneeds": "Digital Media"
+	},
+	"create-booking0043": {
+		"firstname": "Anne",
+		"lastname": "Wojcicki",
+		"totalprice": "6000",
+		"depositpaid": "false",
+		"bookingdates": {
+			"checkin": "2026-06-01",
+			"checkout": "2026-06-10"
+		},
+		"additionalneeds": "Health Tech"
+	},
+	"create-booking0044": {
+		"firstname": "Daniel",
+		"lastname": "Ek",
+		"totalprice": "6100",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2026-07-01",
+			"checkout": "2026-07-10"
+		},
+		"additionalneeds": "Music Streaming"
+	},
+	"create-booking0045": {
+		"firstname": "Susan",
+		"lastname": "Davis",
+		"totalprice": "6200",
+		"depositpaid": "false",
+		"bookingdates": {
+			"checkin": "2026-08-01",
+			"checkout": "2026-08-10"
+		},
+		"additionalneeds": "Sustainability Practices"
+	},
+	"create-booking0046": {
+		"firstname": "Jack",
+		"lastname": "Ma",
+		"totalprice": "6300",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2026-09-01",
+			"checkout": "2026-09-10"
+		},
+		"additionalneeds": "E-commerce Innovations"
+	},
+	"create-booking0047": {
+		"firstname": "Masayoshi",
+		"lastname": "Son",
+		"totalprice": "6400",
+		"depositpaid": "false",
+		"bookingdates": {
+			"checkin": "2026-10-01",
+			"checkout": "2026-10-10"
+		},
+		"additionalneeds": "Investment Strategies"
+	},
+	"create-booking0048": {
+		"firstname": "Reed",
+		"lastname": "Hastings",
+		"totalprice": "6500",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2026-11-01",
+			"checkout": "2026-11-10"
+		},
+		"additionalneeds": "Streaming Services"
+	},
+	"create-booking0049": {
+		"firstname": "Tim",
+		"lastname": "Berners-Lee",
+		"totalprice": "6600",
+		"depositpaid": "false",
+		"bookingdates": {
+			"checkin": "2026-12-01",
+			"checkout": "2026-12-10"
+		},
+		"additionalneeds": "Web Innovations"
+	},
+	"create-booking0050": {
+		"firstname": "Elon",
+		"lastname": "Musk",
+		"totalprice": "6700",
+		"depositpaid": "true",
+		"bookingdates": {
+			"checkin": "2027-01-01",
+			"checkout": "2027-01-10"
+		},
+		"additionalneeds": "Space Exploration"
+	}
+}
