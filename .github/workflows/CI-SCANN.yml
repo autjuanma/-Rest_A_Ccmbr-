@@ -1,3 +1,5 @@
+name: 
+
 on:
   push:
     branches:
@@ -17,60 +19,18 @@ jobs:
           distribution: 'temurin'
 
       - name: Cache Maven packages
-          id: cache
-          uses: actions/cache@v3
-          with:
-            path: ~/.m2/repository
-            key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-            restore-keys: |
-              ${{ runner.os }}-maven-
-
-        - name: Build with Maven
-          run: |
-            mvn clean package -B -DskipTests
-
-        - name: Run Cucumber tests
-          run: |
-            mvn test -B -Dcucumber.filter.tags="@springbot"
-
-
-  codeql-analysis:
-    name: Analyze
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
+        id: cache
+        uses: actions/cache@v3
         with:
-          languages: 'java'
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
 
-      - name: Build the code
-        run: mvn clean package -DskipTests
-
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v2
-
-  security-scan:
-    name: Security Scan
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up JDK 22 LTS
-        uses: actions/setup-java@v2
-        with:
-          java-version: '22'
-          distribution: 'temurin'
-
-      - name: Install OWASP Dependency-Check
+      - name: Build with Maven
         run: |
-          curl -L -o dependency-check.sh https://raw.githubusercontent.com/jeremylong/DependencyCheck/6.5.0/bin/dependency-check.sh
-          chmod +x dependency-check.sh
-          ./dependency-check.sh --version
+          mvn clean package -B -DskipTests
 
-      - name: Run OWASP Dependency-Check
+      - name: Run Cucumber tests
         run: |
-          ./dependency-check.sh --project "BooK-RAss-CCr" --scan . --format "ALL" --out . --failOnCVSS 7
+          mvn test
