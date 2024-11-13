@@ -40,17 +40,43 @@ jobs:
           echo "Listing compiled classes:"
           ls -R target/classes
 
+      - name: Upload test report
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-report
+          path: target/surefire-reports
+
+      - name: Upload code coverage report
+        uses: actions/upload-artifact@v2
+        with:
+          name: code-coverage-report
+          path: target/site/jacoco
+
   code-scanning:
     runs-on: ubuntu-latest
     needs: build-and-test
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
-      - name: Set up CodeQL
+      - name: Security audit
+        run: npm audit --audit-level=critical
+
+      - name: Snyk security scan
+        uses: snyk/actions@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+
+      - name: Create CodeQL config file
+        run: |
+          mkdir -p .github/codeql
+          echo "language: javascript" >> $GITHUB_WORKSPACE/.github/codeql/codeql-config.yml   
+
+      - name: Initialize CodeQL
         uses: github/codeql-action/init@v2
         with:
-          languages: java
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          config-file: ./.github/codeql/codeql-config.yml
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
@@ -94,6 +120,11 @@ jobs:
           name: pmd-report
           path: target/pmd.xml
 
+      - name: Codecov analysis
+        uses: codecov/codecov-action@v1
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
   deploy-reports:
     runs-on: ubuntu-latest
     needs: code-scanning
@@ -119,21 +150,4 @@ jobs:
           name: pmd-report
           path: reports/pmd
 
-      - name: Download CodeQL Results
-        uses: actions/download-artifact@v3
-        with:
-          name: codeql-results
-          path: reports/codeql
-
-      - name: Move Reports
-        run: |
-          mv reports/spotbugs/spotbugs.xml reports/spotbugs-report.xml || echo "SpotBugs report not found."
-          mv reports/checkstyle/checkstyle-result.xml reports/checkstyle-report.xml || echo "Checkstyle report not found."
-          mv reports/pmd/pmd.xml reports/pmd-report.xml || echo "PMD report not found."
-          mv reports/codeql/codeql-results.sarif reports/codeql-results.sarif || echo "CodeQL results not found."
-
-      - name: Upload All Reports as Artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: all-reports
-          path: reports/
+     
