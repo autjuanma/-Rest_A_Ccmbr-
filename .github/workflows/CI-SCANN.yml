@@ -63,7 +63,7 @@ jobs:
           mvn spotbugs:spotbugs
           
       - name: Upload SpotBugs Report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: spotbugs-report
           path: target/spotbugs/spotbugs.xml
@@ -73,7 +73,7 @@ jobs:
           mvn checkstyle:check
           
       - name: Upload Checkstyle Report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: checkstyle-report
           path: target/checkstyle-result.xml
@@ -83,12 +83,7 @@ jobs:
           mvn pmd:pmd
 
       - name: Upload PMD Report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: pmd-report
           path: target/pmd.xml
-
-      - name: Run additional code quality tools
-        run: |
-          # Add commands to run other code quality tools here, if needed.
-          echo "Running additional code quality tools..."
