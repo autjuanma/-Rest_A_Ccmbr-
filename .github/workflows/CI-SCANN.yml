@@ -40,61 +40,67 @@ jobs:
           echo "Listing compiled classes:"
           ls -R target/classes
 
-  code-scanning:
-    runs-on: ubuntu-latest
-    needs: build-and-test
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+ code-scanning:
+  runs-on: ubuntu-latest
+  needs: build-and-test
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Set up CodeQL
-        uses: github/codeql-action/init@v2
-        with:
-          languages: 'java,kotlin'  # Include Kotlin if applicable
+    - name: Set up CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: 'java,kotlin'  # Include Kotlin if applicable
 
-      - name: List compiled classes for CodeQL
-        run: |
-          echo "Listing compiled classes for CodeQL analysis:"
+    - name: Check for compiled classes
+      run: |
+        echo "Checking for compiled classes for CodeQL analysis:"
+        if [ -d target/classes ]; then
+          echo "Compiled classes found:"
           ls -R target/classes
+        else
+          echo "No compiled classes found. Please check the build step."
+          exit 1  # Exit with an error code if the directory does not exist
+        fi
 
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v2
-        with:
-          category: 'security'
-          output: 'codeql-results.sarif'
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v2
+      with:
+        category: 'security'
+        output: 'codeql-results.sarif'
 
-      - name: Upload CodeQL Results
-        uses: github/codeql-action/upload-sarif@v2
-        with:
-          sarif_file: codeql-results.sarif
+    - name: Upload CodeQL Results
+      uses: github/codeql-action/upload-sarif@v2
+      with:
+        sarif_file: codeql-results.sarif
 
-      - name: Run SpotBugs
-        run: |
-          mvn spotbugs:check
-          mvn spotbugs:spotbugs
+    - name: Run SpotBugs
+      run: |
+        mvn spotbugs:check
+        mvn spotbugs:spotbugs
 
-      - name: Upload SpotBugs Report
-        uses: actions/upload-artifact@v3
-        with:
-          name: spotbugs-report
-          path: target/spotbugs/spotbugs.xml
+    - name: Upload SpotBugs Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: spotbugs-report
+        path: target/spotbugs/spotbugs.xml
 
-      - name: Run Checkstyle
-        run: |
-          mvn checkstyle:check
+    - name: Run Checkstyle
+      run: |
+        mvn checkstyle:check
 
-      - name: Upload Checkstyle Report
-        uses: actions/upload-artifact@v3
-        with:
-          name: checkstyle-report
-          path: target/checkstyle-result.xml
+    - name: Upload Checkstyle Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: checkstyle-report
+        path: target/checkstyle-result.xml
 
-      - name: Run PMD
-        run: |
-          mvn pmd:pmd
+    - name: Run PMD
+      run: |
+        mvn pmd:pmd
 
-      - name: Upload PMD Report
-        uses: actions/upload-artifact@v3
-        with:
-          name: pmd-report
-          path: target/pmd.xml
+    - name: Upload PMD Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: pmd-report
+        path: target/pmd.xml
