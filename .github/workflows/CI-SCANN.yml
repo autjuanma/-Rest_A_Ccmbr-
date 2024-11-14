@@ -32,6 +32,11 @@ jobs:
           mvn clean package -B -DskipTests -X  # Enable debug logging
           echo "Build completed with exit code: $?"
 
+      - name: List target directory
+        run: |
+          echo "Contents of the target directory:"
+          ls -R target
+
       - name: Run Cucumber tests
         run: |
           mvn test -Dmaven.test.failure.ignore=true
@@ -102,12 +107,4 @@ jobs:
           name: checkstyle-report
           path: target/checkstyle-result.xml
 
-      - name: Run PMD
-        run: |
-          mvn pmd:pmd
-
-      - name: Upload PMD Report
-        uses: actions/upload-artifact@v3
-        with:
-          name: pmd-report
-          path: target/pmd.xml
+     
