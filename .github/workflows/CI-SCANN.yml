@@ -50,7 +50,12 @@ jobs:
       - name: Set up CodeQL
         uses: github/codeql-action/init@v2
         with:
-          languages: java
+          languages: 'java,kotlin'  # Include Kotlin if applicable
+
+      - name: List compiled classes for CodeQL
+        run: |
+          echo "Listing compiled classes for CodeQL analysis:"
+          ls -R target/classes
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
