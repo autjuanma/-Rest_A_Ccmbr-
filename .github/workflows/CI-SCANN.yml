@@ -29,7 +29,7 @@ jobs:
 
       - name: Build with Maven
         run: |
-          mvn clean package -B -DskipTests
+          mvn clean package -B -DskipTests -X  # Enable debug logging
           echo "Build completed with exit code: $?"
 
       - name: Run Cucumber tests
@@ -40,6 +40,7 @@ jobs:
         run: |
           echo "Listing compiled classes:"
           if [ -d target/classes ]; then
+            echo "Compiled classes found:"
             ls -R target/classes
           else
             echo "No compiled classes found. Please check the build step."
