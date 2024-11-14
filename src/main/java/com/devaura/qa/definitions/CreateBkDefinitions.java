@@ -24,7 +24,7 @@ import io.restassured.module.jsv.JsonSchemaValidator;
 public class CreateBkDefinitions {
 
 	private static final Logger LOG = LogManager.getLogger(CreateBkDefinitions.class);
-	private static final String SCHEMA_FILE_PATH = "data/";
+	private static final String SCHEMA_FILE_PATH = "resources/data/";
 
 	private static final String BOOKING_ID_MISSING_MSG = "Booking ID missing";
 	private static final String FIRST_NAME_MISMATCH_MSG = "First Name did not match";
@@ -109,7 +109,9 @@ public class CreateBkDefinitions {
 
 	@Then("she validates the response against the JSON schema {string}")
 	public void userValidatesResponseWithJSONSchema(String jsonFileName) {
-		context.response.then().assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath(SCHEMA_FILE_PATH + jsonFileName));
+		context.response.then().assertThat()
+				.body(JsonSchemaValidator.matchesJsonSchemaInClasspath(SCHEMA_FILE_PATH + jsonFileName));
+		LOG.info("Successfully Validated schema from " + jsonFileName);
 	}
 
 	@When("she creates a booking using the data identified by {string} from the JSON file {string}")
