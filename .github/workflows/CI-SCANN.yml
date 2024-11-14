@@ -30,6 +30,7 @@ jobs:
       - name: Build with Maven
         run: |
           mvn clean package -B -DskipTests
+          echo "Build completed with exit code: $?"
 
       - name: Run Cucumber tests
         run: |
@@ -38,7 +39,12 @@ jobs:
       - name: List compiled classes
         run: |
           echo "Listing compiled classes:"
-          ls -R target/classes
+          if [ -d target/classes ]; then
+            ls -R target/classes
+          else
+            echo "No compiled classes found. Please check the build step."
+            exit 1  # Exit with an error code if the directory does not exist
+          fi
 
   code-scanning:
     runs-on: ubuntu-latest
