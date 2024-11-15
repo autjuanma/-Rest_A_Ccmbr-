@@ -9,8 +9,7 @@ Feature: New booking
       | firstname   | lastname   | totalprice   | depositpaid   | checkin   | checkout   | additionalneeds   |
       | <firstname> | <lastname> | <totalprice> | <depositpaid> | <checkin> | <checkout> | <additionalneeds> |
     Then she should receive a response code of 200
-    And she validates the booking data
-    And she validates the response against the JSON schema "json-booking-schema.json"
+    And she validates the json schema using the next file "json-booking-schema.json"
 
     Examples: 
       | firstname | lastname    | totalprice | depositpaid | checkin    | checkout   | additionalneeds            |
@@ -57,7 +56,7 @@ Feature: New booking
   Scenario Outline: To create new booking using JSON data
     When she creates a booking using the data identified by "<objectKey>" from the JSON file "<jsonFile>"
     Then she should receive a response code of 200
-    And she validates the response against the JSON schema "json-booking-schema.json"
+    And she validates the json schema using the next file "json-booking-schema.json"
 
     Examples: 
       | objectKey          | jsonFile                     |

@@ -19,12 +19,12 @@ Feature: booking rm/DELETE scenarios
       | firstname   | lastname   | totalprice   | depositpaid   | checkin   | checkout   | additionalneeds   |
       | <firstname> | <lastname> | <totalprice> | <depositpaid> | <checkin> | <checkout> | <additionalneeds> |
     Then she should receive a response code of 200
-    And she validates the response against the JSON schema "json-booking-schema.json"
+    And she validates the json schema using the next file "json-booking-schema.json"
     And she updates the booking details
       | firstname   | lastname   | totalprice   | depositpaid   | checkin   | checkout   | additionalneeds   |
       | <firstname> | <lastname> | <totalprice> | <depositpaid> | <checkin> | <checkout> | <additionalneeds> |
     And she should receive a response code of 200
-    And she validates the response against the JSON schema "booking-details-schema.json"
+    And she validates the json schema using the next file "booking-details-schema.json"
     And sends request to retrieve the booking IDs
     And she should receive a response code of 200
     And performs to booking delete request with mecanims basic auth

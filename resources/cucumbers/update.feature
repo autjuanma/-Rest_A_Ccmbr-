@@ -13,12 +13,10 @@ Feature: To update a booking in restful-booker
       | firstname   | lastname   | totalprice   | depositpaid   | checkin   | checkout   | additionalneeds   |
       | <firstname> | <lastname> | <totalprice> | <depositpaid> | <checkin> | <checkout> | <additionalneeds> |
     Then she should receive a response code of 200
-    And she validates the response against the JSON schema "update-object-file.json"
+    And she validates the json schema using the next file "update-object-file.json"
 
     Examples: 
       | firstname   | lastname  | totalprice | depositpaid | checkin    | checkout   | additionalneeds |
-      | Mickey      | Mouse     |      10000 | true        | 2021-05-15 | 2021-06-11 | Breakfast       |
-      | Tasmanian   | Devil     |       2006 | false       | 2021-06-01 | 2021-07-10 | Dinner          |
       | Mickey      | Mouse     |      10000 | true        | 2021-05-15 | 2021-06-11 | Breakfast       |
       | Tasmanian   | Devil     |       2006 | false       | 2021-06-01 | 2021-07-10 | Dinner          |
       | John        | Smith     |      10001 | true        | 2021-01-15 | 2021-02-11 | Breakfast       |
@@ -78,7 +76,7 @@ Feature: To update a booking in restful-booker
     When sends request to retrieve the booking IDs
     And updates the booking details using the data identified by "<objKey>" from the JSON file named "<jsonFile>" .
     Then she should receive a response code of 200
-    And she validates the response against the JSON schema "update-object-file.json"
+    And she validates the json schema using the next file "update-object-file.json"
 
     Examples: 
       | objKey           | jsonFile                |
@@ -137,6 +135,6 @@ Feature: To update a booking in restful-booker
   Scenario: To partially update a booking
     Given she has access to the endpoint "/booking"
     When sends request to retrieve the booking IDs
-    And makes a request to update the first name to "Mickey" and the last name to "Mouse"
+    And makes a request to update the first name to "Mickey" and the last name to "ranma"
     Then she should receive a response code of 200
-    And she validates the response against the JSON schema "update-object-file.json"
+    And she validates the json schema using the next file "update-object-file.json"
