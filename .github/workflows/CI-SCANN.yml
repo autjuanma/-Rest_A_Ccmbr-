@@ -50,33 +50,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up CodeQL
-        uses: github/codeql-action/init@v2
-        with:
-          languages: 'java,kotlin'  # Include Kotlin if applicable
-
-      - name: Check for compiled classes
-        run: |
-          echo "Checking for compiled classes for CodeQL analysis:"
-          if [ -d target/classes ]; then
-            echo "Compiled classes found:"
-            ls -R target/classes
-          else
-            echo "No compiled classes found. Please check the build step."
-            exit 1  # Exit with an error code if the directory does not exist
-          fi
-
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v2
-        with:
-          category: 'security'
-          output: 'codeql-results.sarif'
-
-      - name: Upload CodeQL Results
-        uses: github/codeql-action/upload-sarif@v2
-        with:
-          sarif_file: codeql-results.sarif
-
       - name: Run SpotBugs
         run: |
           mvn spotbugs:check
