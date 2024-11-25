@@ -14,11 +14,9 @@ public class DeserializedResponse {
 
     /**
      * Deserializes the given REST Assured response into an object of the specified class type.
+     * @author [JuanTous]
      *
      * @param response the response to deserialize
-     * @param clazz    the class of T
-     * @param <T>     the type of the desired object
-     * @return an instance of T deserialized from the response
      * @throws IOException if there is an error during deserialization
      */
     public static <T> T deserializedResponse(Response response, Class<T> clazz) throws IOException {

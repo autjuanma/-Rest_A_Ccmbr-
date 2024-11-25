@@ -1,6 +1,8 @@
 package com.devaura.qa.utils;
 
 
+import static com.devaura.qa.utils.PropertiesFileReader.getProperty;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -12,7 +14,7 @@ import org.json.simple.parser.ParseException;
 
 public class JsonReader {
 
-	private static String dataPath = new File(PropertiesFileReader.getProperty("test.data.path")).getAbsolutePath()+File.separator;
+	private static String dataPath = new File(getProperty("test.data.path")).getAbsolutePath()+File.separator;
 	private static JSONParser parser = new JSONParser();
 	private static Object body;
 

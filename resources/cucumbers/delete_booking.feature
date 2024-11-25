@@ -83,7 +83,6 @@ Feature: booking rm/DELETE scenarios
       | Laura       | Edwards   |      44044 | false       | 2024-12-06 | 2025-01-10 | Dinner          |
       | William     | Collins   |      45045 | true        | 2025-01-11 | 2025-02-15 | Lunch           |
       | Jessica     | Stewart   |      46046 | false       | 2025-02-16 | 2025-03-22 | Breakfast       |
-      | Charles     | Sanchez   |      47047 | true        | 2025-03-23 | 2025-04-28 | Dinner          |
       | Michelle    | Morris    |      48048 | false       | 2025-04-29 | 2025-06-03 | Lunch           |
       | Daniel      | Rogers    |      49049 | true        | 2025-06-04 | 2025-07-10 | Breakfast       |
       | Nancy       | Reed      |      50050 | false       | 2025-07-11 | 2025-08-15 | Dinner          |

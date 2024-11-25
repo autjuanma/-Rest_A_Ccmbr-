@@ -26,7 +26,7 @@ public class TestContext {
 				.accept(CONTENT_TYPE);
 	}
 
-	// New method to retrieve session data with type safety @Masha
+	// New method to retrieve session data with type safety @JuanTous 
 	public <T> T getSessionData(String key, Class<T> clazz) {
 		Object data = session.get(key);
 		if (clazz.isInstance(data)) {
